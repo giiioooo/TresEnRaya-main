@@ -72,4 +72,4 @@ function reiniciarJuego() {
 }
 
 // Dibujar el tablero inicial
-dibujarTablero();
+dibujarTablero()
