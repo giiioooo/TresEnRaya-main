@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tres en Raya</title>
+  <meta charset="utf-8">
+  <title>Batalla en Gotham</title>
   <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-  <h1>Tres en Raya</h1>
-  <div class="player1">
-    <b>Batman</b>
+  <div class="container">
+  <h1>Batalla en Gotham</h1>
+  <div class="players">
+    <span class="batman"><b>Batman 🦇</b></span>
+    <span class="joker"><b>Joker 🃏</b></span>
   </div>
-  <div class="player2">
-    Joker
-  </div>
+  
+    
+  
   <table>
     <tr>
       <td onclick="hacerMovimiento(0, 0)"></td>
@@ -29,8 +32,9 @@
       <td onclick="hacerMovimiento(2, 2)"></td>
     </tr>
   </table>
-  <button onclick="reiniciarJuego()">Reiniciar</button>
+  <button onclick="reiniciarJuego()">Revancha</button>
 
   <script src="script.js"></script>
+</div>
 </body>
 </html>
