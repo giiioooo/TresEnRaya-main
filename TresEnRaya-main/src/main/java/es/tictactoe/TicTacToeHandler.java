@@ -12,8 +12,10 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 import es.tictactoe.TicTacToeGame.Event;
 import es.tictactoe.TicTacToeGame.EventType;
+
 
 public class TicTacToeHandler extends TextWebSocketHandler {
 
@@ -96,7 +98,7 @@ public class TicTacToeHandler extends TextWebSocketHandler {
 
 			switch (msg.action) {
 
-			case JOIN_GAME:
+				case JOIN_GAME:
 				int numPlayers = game.getPlayers().size();
 				String letter = numPlayers == 0 ? "X" : "O";
 				Player player = new Player(numPlayers + 1, letter, msg.data.name);

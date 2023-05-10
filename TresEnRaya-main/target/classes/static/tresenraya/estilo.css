@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 48px;
+    font-weight: bold;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  td:hover {
+    background-color: #ddd;
+  }
+  
+  td:active {
+    background-color: #ccc;
+  }
+  
+  td.X {
+    color: #ff6347;
+  }
+  
+  td.O {
+    color: #4169e1;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  button:active {
+    background-color: #222;
+  }
+
+.player1{
+    margin-right: 970px;
+}
+
+.player2{
+    margin-left: 800px;
+    margin-bottom: 10px
+}
