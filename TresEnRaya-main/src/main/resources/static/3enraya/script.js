@@ -6,7 +6,7 @@ let tablero = [
 ];
 
 // Jugador actual (X comienza)
-let jugadorActual = 'X';
+let jugadorActual = '🦇';
 
 // Función para dibujar el tablero
 function dibujarTablero() {
@@ -55,7 +55,7 @@ function hacerMovimiento(fila, columna) {
       alert('¡Jugador ' + jugadorActual + ' ha ganado!');
     } else {
       // Cambiar al siguiente jugador
-      jugadorActual = jugadorActual === 'X' ? 'O' : 'X';
+      jugadorActual = jugadorActual === '🦇' ? '🃏' : '🦇';
     }
   }
 }
@@ -67,7 +67,7 @@ function reiniciarJuego() {
     ['', '', ''],
     ['', '', '']
   ];
-  jugadorActual = 'X';
+  jugadorActual = '🦇';
   dibujarTablero();
 }
 
