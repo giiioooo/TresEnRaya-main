@@ -47,12 +47,12 @@ function hayGanador() {
 
 // Función para realizar un movimiento
 function hacerMovimiento(fila, columna) {
-  // Verificar si la celda está vacía y no hay gana
+  // Verificar si la celda está vacía y no hay ganador
   if (tablero[fila][columna] === '' && !hayGanador()) {
     tablero[fila][columna] = jugadorActual;
     dibujarTablero();
     if (hayGanador()) {
-      alert('¡Jugador ' + jugadorActual + ' ha ganado!');
+      alert( jugadorActual + ' HA VENCIDO!');
     } else {
       // Cambiar al siguiente jugador
       jugadorActual = jugadorActual === '🦇' ? '🃏' : '🦇';
