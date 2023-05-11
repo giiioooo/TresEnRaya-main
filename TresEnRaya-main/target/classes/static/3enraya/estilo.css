@@ -1,60 +1,95 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    text-align: center;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(fondo.jpg);
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+
   
-  h1 {
-    color: #333;
-  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(fondo.jpg);
+  background-size: cover;
+  min-height: vh;
+  background-position: center;
+}
+
+h1 {
+  color: white;
   
-  table {
-    margin: 20px auto;
-    border-collapse: collapse;
-  }
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 48px;
+  font-weight: bold;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+td:hover {
+  background-color: #ddd;
+}
+
+td:active {
+  background-color: #ccc;
+}
+
+td.X {
+  color: #ff6347;
+}
+
+td.O {
+  color: #4169e1;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:active {
+  background-color: #222;
+}
+
+.players{
   
-  td {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 48px;
-    font-weight: bold;
-    border: 2px solid #333;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+  font-size: 30px;
+
   
-  td:hover {
-    background-color: #ddd;
-  }
-  
-  td:active {
-    background-color: #ccc;
-  }
-  
-  td.X {
-    color: #ff6347;
-  }
-  
-  td.O {
-    color: #4169e1;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  button:active {
-    background-color: #222;
-  }
+}
+
+.batman{
+color:yellow;
+
+}
+
+.joker{
+color:purple;
+margin-left: 750px;
+}
+
+.tituloinicio{
+text-align: center;
+}

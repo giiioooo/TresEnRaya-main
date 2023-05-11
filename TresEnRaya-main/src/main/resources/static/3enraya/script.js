@@ -1,12 +1,15 @@
 // Tablero de juego
-let tablero = [
-  ['', '', ''],
+let tablero = [  ['', '', ''],
   ['', '', ''],
   ['', '', '']
 ];
 
 // Jugador actual (X comienza)
-let jugadorActual = '🦇';
+let jugadorActual = 'X';
+
+// Contador de partidas ganadas por cada jugador
+let contadorX = 0;
+let contadorO = 0;
 
 // Función para dibujar el tablero
 function dibujarTablero() {
@@ -53,9 +56,20 @@ function hacerMovimiento(fila, columna) {
     dibujarTablero();
     if (hayGanador()) {
       alert('¡Jugador ' + jugadorActual + ' ha ganado!');
+      // Actualizar el contador de partidas ganadas
+      if (jugadorActual === 'X') {
+        contadorX++;
+      } else {
+        contadorO++;
+      }
+      // Actualizar el HTML con el número de partidas ganadas
+      const contadorXElement = document.getElementById('contadorX');
+      const contadorOElement = document.getElementById('contadorO');
+      contadorXElement.textContent = contadorX;
+      contadorOElement.textContent = contadorO;
     } else {
       // Cambiar al siguiente jugador
-      jugadorActual = jugadorActual === '🦇' ? '🃏' : '🦇';
+      jugadorActual = jugadorActual === 'X' ? 'O' : 'X';
     }
   }
 }
@@ -67,9 +81,53 @@ function reiniciarJuego() {
     ['', '', ''],
     ['', '', '']
   ];
-  jugadorActual = '🦇';
+  jugadorActual = 'X';
   dibujarTablero();
 }
 
+// Función para actualizar el contador de partidas ganadas
+function actualizarContadorPartidas(jugadorGanador) {
+  const contador = document.getElementById('contador-partidas');
+  let partidasGanadas = parseInt(contador.textContent);
+  if (jugadorGanador === 'X' || jugadorGanador === 'O') {
+    partidasGanadas++;
+    contador.textContent = partidasGanadas;
+  }
+}
+
+// Función para reiniciar el contador de partidas ganadas
+function reiniciarContadorPartidas() {
+  const contador = document.getElementById('contador-partidas');
+  contador.textContent = '0';
+}
+
+// Función para hacer un movimiento y actualizar el contador de partidas ganadas
+function hacerMovimiento(fila, columna) {
+  // Verificar si la celda está vacía y no hay ganador
+  if (tablero[fila][columna] === '' && !hayGanador()) {
+    tablero[fila][columna] = jugadorActual;
+    dibujarTablero();
+    if (hayGanador()) {
+      alert('¡Jugador ' + jugadorActual + ' ha ganado!');
+      actualizarContadorPartidas(jugadorActual);
+    } else {
+      // Cambiar al siguiente jugador
+      jugadorActual = jugadorActual === 'X' ? 'O' : 'X';
+    }
+  }
+}
+
+// Función para reiniciar el juego y el contador de partidas ganadas
+function reiniciarJuego() {
+  tablero = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '']
+  ];
+  jugadorActual = 'X';
+  dibujarTablero();
+  reiniciarContadorPartidas();
+}
+
 // Dibujar el tablero inicial
-dibujarTablero()
+dibujarTablero();
