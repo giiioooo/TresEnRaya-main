@@ -1,16 +1,16 @@
-// Carga un sonido a través de su fuente y lo inyecta de manera oculta
+// Cargamos nuestro sonido a través de su fuente y lo inyectamos de manera oculta
 const cargarSonido = function (fuente) {
     const sonido = document.createElement("audio");
     sonido.src = fuente;
     sonido.setAttribute("preload", "auto");
     sonido.setAttribute("controls", "none");
-    sonido.style.display = "none"; // <-- oculto
+    sonido.style.display = "none";
     document.body.appendChild(sonido);
     return sonido;
 };
 const $botonReproducir = document.querySelector("#btnReproducir"),
     $botonPausar = document.querySelector("#btnPausar");
-// El sonido que podemos reproducir o pausar
+//para pausar o reproducir el sonido
 const sonido = cargarSonido("Batman .m4a");
 $botonReproducir.onclick = () => {
     sonido.play();
