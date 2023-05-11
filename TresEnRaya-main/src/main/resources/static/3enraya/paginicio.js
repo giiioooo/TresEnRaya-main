@@ -9,8 +9,7 @@ const cargarSonido = function (fuente) {
     return sonido;
 };
 const $botonReproducir = document.querySelector("#btnReproducir"),
-    $botonPausar = document.querySelector("#btnPausar"),
-    $botonReiniciar = document.querySelector("#btnReiniciar");
+    $botonPausar = document.querySelector("#btnPausar");
 // El sonido que podemos reproducir o pausar
 const sonido = cargarSonido("Batman .m4a");
 $botonReproducir.onclick = () => {
