@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tres en Raya</title>
+  <meta charset="utf-8">
+  <title>Batalla en Gotham</title>
   <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-  <h1>Tres en Raya</h1>
-  <div id="partidas-ganadas" class="e">Partidas ganadas</div>
+  <div class="container">
+  <h1>Batalla en Gotham</h1>
+  <div class="players">
+    <span class="batman"><b>Batman 🦇</b></span>
+    <span class="joker"><b>Joker 🃏</b></span>
+  </div>
+  
+    
+  
   <table>
-    <spa class="batman joker">
-      <h1 class="batman">j</h1>
-      <h1 class="joker">j</h1>
-    </spa>
     <tr>
       <td onclick="hacerMovimiento(0, 0)"></td>
       <td onclick="hacerMovimiento(0, 1)"></td>
@@ -28,10 +32,18 @@
       <td onclick="hacerMovimiento(2, 2)"></td>
     </tr>
   </table>
-  <button onclick="reiniciarJuego()">Reiniciar</button>
+  <button onclick="reiniciarJuego()">Revancha</button>
 
-  <a href="paginainicio.html"><button>Volver al inicio</button></a>
-
+  <br>
+<DIV>
+  <button id="btnReproducir">🎶</button>
+  <button id="btnPausar">🔇</button>
+  <audio src="Batman .m4a" preload="none" style="display:none;"></audio>
+</DIV>
+<a href="paginaincio.html"><button id="salir">Salir al Inicio</button></a>
   <script src="script.js"></script>
+  <script src="paginicio.js"></script>
+
+</div>
 </body>
 </html>
